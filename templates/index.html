@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Frame Example</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>course bundle</th>
+                <th>trainer</th>
+                <th>zoom id</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, row in df.iterrows() %}
+            <tr>
+                <td>{{ row['Bundle Event Name '] }}</td>
+                <td>{{ row['New Trainer'] }}</td>
+                <td>{{ row['Zoom ids'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
