@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Select Options Example</title>
+    <title>Data Mites</title>
 </head>
 <body>
-    <select name="trainer">
+<form action="{{url_for('trainer')}}" method='post'>
+<div class='body_form'>    
+<select name="trainer" id='dropdown' required='required'>
         {% for option in options %}
             {% if option == selected_option %}
                 <option value="{{ option }}" selected>{{ option 
@@ -14,21 +16,22 @@
             {% endif %}
         {% endfor %}
     </select>
-<pre>
 <p>
-<button onclick="redirectToNewTemplate()">Select
-    <script>
-        function redirectToNewTemplate() {
-            window.location.href = '/trainer';
-        }</script></button>
+<button id='sub',type='submit'>Select</button>
+</div>
 <h7><b>Doubt clearing this week</b></h7>
-WeD -- RC
-Thur -- RC
-Status call -- RC
-</p></pre>
+</form>
+<pre>     
+Wednesday          -- RC
+Thursday           -- RC
+<b>Status call</b>        -- RC
+</pre>
+</p>
 <p>
-<h7<b><a 
-href='https://docs.google.com/spreadsheets/d/13QgilOKsndVS79OO5ehedY_tglwUhhNy_k4FynJRJ3M/edit#gid=258390129'>Evaluation sheet</a></b></h7>
+<h7<b>
+<pre>
+<a href='https://docs.google.com/spreadsheets/d/13QgilOKsndVS79OO5ehedY_tglwUhhNy_k4FynJRJ3M/edit#gid=258390129'>Evaluation sheet</a></b></h7>
+<a href='https://rb.gy/2yhjb'>Break Announcement Form</a></pre>
 </body>
 </html>
 
